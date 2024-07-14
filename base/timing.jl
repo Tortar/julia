@@ -298,7 +298,7 @@ julia> @time begin
 julia> @time "A one second sleep" sleep(1)
 A one second sleep: 1.005750 seconds (5 allocations: 144 bytes)
 
-julia> for loop in 1:3
+julia> for loop in string.(1:3)
             @time loop sleep(1)
         end
 1: 1.006760 seconds (5 allocations: 144 bytes)
